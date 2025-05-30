@@ -1,0 +1,31 @@
+@import "tailwindcss";
+* {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+}
+
+nav {
+    background: rgba(120, 120, 120, 0.16);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(111, 111, 111, 0.388);
+} 
+
+h2 {
+    font-family: monospace;
+}
+
+img[alt="navis"] {
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 50;
+    transition: transform 0.3s ease-in-out;
+}
+
+img[alt="navis"]:hover {
+    transform: scale(1.2);
+}
+
