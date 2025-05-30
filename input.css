@@ -1,31 +1,27 @@
 @import "tailwindcss";
 * {
-    scroll-behavior: smooth;
-}
-
-::selection {
-    background-color: #fff;
-    color: #000;
-    border-radius: 20px;
-}
-
-nav {
-    background: rgba(120, 120, 120, 0.16);
-    backdrop-filter: blur(10px);
-    border: 1.5px solid rgba(111, 111, 111, 0.388);
-} 
-
-h2 {
     font-family: monospace;
 }
 
-img[alt="navis"] {
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-    z-index: 50;
-    transition: transform 0.3s ease-in-out;
+h1::selection {
+    background: #fff;
+    color: #000;
 }
 
-img[alt="navis"]:hover {
-    transform: scale(1.2);
+.name-row span {
+    animation: spring-letter 0.8s ease-in-out 0.3s;
+    animation-delay: 2.100727s;
 }
+.name-row span:nth-child(2){ animation-delay: 2.202545s; }
+.name-row span:nth-child(3){ animation-delay: 2.343418s; }
+.name-row span:nth-child(4){ animation-delay: 2.409527s; }
+.name-row span:nth-child(5){ animation-delay: 2.514473s; }
+.name-row span:nth-child(6){ animation-delay: 2.596836s; }
+.name-row span:nth-child(7){ animation-delay: 2.6984s; }
+.name-row span:nth-child(8){ animation-delay: 2.772036s; }
 
+@keyframes spring-letter {
+    0% { font-size: 120px }
+    50% { font-size: 132px }
+    100% { font-size: 120px }
+}
