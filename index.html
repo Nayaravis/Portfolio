@@ -9,26 +9,55 @@
     <link rel="preload" as="image" href="./assets/images/hero_background.png" type="image/png">
 </head>
 <body>
-    <div class="nav-container fixed w-full p-2 flex justify-center">
-        <nav class="w-4xl px-10 p-5 rounded-full border-[2.5px]">
-            <ul class="flex justify-around text-2xl">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact Me</a></li>
+    <div class="nav-container fixed w-full p-2 flex justify-center z-100">
+        <nav class="p-6 flex fixed items-center justify-center rounded-full border-2">
+            <ul class="flex justify-around sm:text-2xl text[18px] gap-[50px]">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
     </div>
-    <section id="hero" class="bg-[url('./assets/images/hero_background.png')] w-full h-[100vh] bg-cover bg-no-repeat">
-        <div class="flex flex-wrap flex-row-reverse h-full">
-            <img src="./assets/images/navis.png" alt="a picture of navis" class="sm:h-[680px] h-[400px]" id="headshot">
-            <h1 class="h-full flex flex-col justify-end p-8">
-                <span class="text-[32px]">Hi,</span><span class="text-[120px] font-black name-row">
-                    <span>I</span><span>'</span><span>m</span> <span>N</span><span>a</span><span>v</span><span>i</span><span>s</span>
-                </span>
-            </h1>
+    <section id="hero" class="bg-[url('./assets/images/hero_background.png')] w-full h-[100vh] bg-cover bg-no-repeat flex flex-col justify-between">
+        <h1 class="w-full h-full flex justify-center items-center flex-col p-8">
+            <span class="text-[32px]">Hi,</span><span class="md:text-[120px] text-[80px] font-black name-row">
+            <span>I</span><span>'</span><span>m</span> <span>N</span><span>a</span><span>v</span><span>i</span><span>s</span>
+            </span>
+        </h1>
+        <p class="text-2xl text-center mb-7">I design solutions by questioning assumptions first</p>
+        <div class="w-full flex justify-center items-center h-20 mb-2.5" id="arrow">
+            <img src="./assets/images/keyboard_double_arrow_down.svg" alt="keyboard_double_arrow_down">
         </div>
     </section>
-    <section id="about" class="h-screen w-full">
+    <section id="skills" class="h-fit w-full bg-black py-16">
+        <div class="skills-list w-full h-fit md:p-0 p-2 flex flex-wrap justify-center items-center gap-7">
+            <div class="w-xl h-72 rounded-2xl border-1 skill-card python-skills relative text-white flex flex-col">
+                <h3 class="text-2xl font-bold mb-2 border-b p-2.5">Python</h3>
+                <ul class="p-3 python">
+                    <li>Flask</li>
+                    <li>Django</li>
+                    <li>FastAPI</li>
+                </ul>
+            </div>
+            <div class="w-xl h-72 rounded-2xl border-1 skill-card kotlin-skills relative text-white flex flex-col">
+                <h3 class="text-2xl font-bold mb-2 border-b p-2.5">Kotlin</h3>
+                <ul class="p-3 kotlin">
+                    <li>Jetpack Compose</li>
+                    <li>Room</li>
+                    <li>Retrofit</li>
+                </ul>
+            </div>
+            <div class="w-xl h-72 rounded-2xl border-1 skill-card js-skills relative text-white flex flex-col">
+                <h3 class="text-2xl font-bold mb-2 border-b p-2.5">Javascript</h3>
+                <ul class="p-3 javascript">
+                    <li>Node.js</li>
+                    <li>React</li>
+                    <li>Next.js</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="h-screen w-full">
 
     </section>
 </body>
