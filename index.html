@@ -6,19 +6,20 @@
     <title>Navis Ayara</title>
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./output.css">
+    <link rel="preload" as="image" href="./assets/images/hero_background.png" type="image/png">
 </head>
 <body>
     <div class="nav-container fixed w-full p-2 flex justify-center">
-        <nav class="w-4xl px-10 py-3.5 rounded-full border-2">
-            <ul class="flex justify-around">
+        <nav class="w-4xl px-10 p-5 rounded-full border-[2.5px]">
+            <ul class="flex justify-around text-2xl">
                 <li><a href="">Home</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Contact Me</a></li>
             </ul>
         </nav>
     </div>
-    <div id="hero" class="bg-[url('./assets/images/hero_background.png')] w-full h-[100vh] bg-cover bg-no-repeat">
-        <div class="flex flex-wrap flex-row-reverse justify-between h-full">
+    <section id="hero" class="bg-[url('./assets/images/hero_background.png')] w-full h-[100vh] bg-cover bg-no-repeat">
+        <div class="flex flex-wrap flex-row-reverse h-full">
             <img src="./assets/images/navis.png" alt="a picture of navis" class="sm:h-[680px] h-[400px]" id="headshot">
             <h1 class="h-full flex flex-col justify-end p-8">
                 <span class="text-[32px]">Hi,</span><span class="text-[120px] font-black name-row">
@@ -26,6 +27,9 @@
                 </span>
             </h1>
         </div>
-    </div>
+    </section>
+    <section id="about" class="h-screen w-full">
+
+    </section>
 </body>
 </html>

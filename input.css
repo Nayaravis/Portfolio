@@ -3,6 +3,11 @@
     font-family: monospace;
 }
 
+nav {
+    backdrop-filter: blur(19px);
+    border-color: #4f4f4fb3;
+}
+
 h1::selection {
     background: #fff;
     color: #000;
