@@ -1,12 +1,27 @@
 @import "tailwindcss";
 * {
     font-family: monospace;
+    scroll-behavior: smooth;
 }
 
 nav {
-    backdrop-filter: blur(19px);
-    border-color: #4f4f4fb3;
+    backdrop-filter: blur(12px);
+    background-color: #5b5b5bae;
+    border-color: rgba(169, 169, 169, 0.3);
 }
+
+nav ul li {
+    transition: all 0.2s ease-in-out;
+}
+
+nav:hover ul li {
+    filter: blur(5px);
+}
+
+nav ul li:hover {
+    filter: none;
+}
+
 
 h1::selection {
     background: #fff;
@@ -16,7 +31,9 @@ h1::selection {
 .name-row span {
     animation: spring-letter 0.8s ease-in-out 0.3s;
     animation-delay: 2.100727s;
+    white-space: pre;
 }
+
 .name-row span:nth-child(2){ animation-delay: 2.202545s; }
 .name-row span:nth-child(3){ animation-delay: 2.343418s; }
 .name-row span:nth-child(4){ animation-delay: 2.409527s; }
@@ -30,3 +47,72 @@ h1::selection {
     50% { font-size: 132px }
     100% { font-size: 120px }
 }
+
+@keyframes spring-letter-small {
+    0% { font-size: 80px }
+    50% { font-size: 92px }
+    100% { font-size: 80px }
+}
+
+@media (width <= 48rem) {
+    .name-row {
+        line-height: 65px;
+        letter-spacing: 1;
+    }
+    .name-row span {
+        animation: spring-letter-small 0.8s ease-in-out 0.3s;
+        animation-delay: 2.100727s;
+        white-space: pre;
+    }
+}
+
+#arrow {
+    animation: fade-translate 2s cubic-bezier(0.76,-0.01, 0.56, 0.98) infinite;
+    opacity: 0;
+}
+
+@keyframes fade-translate {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+}
+
+.skill-card {
+    border-color: #48484884;
+    backdrop-filter: blur(5px);
+    background-color: #2f2f2f42;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.python-skills:hover { box-shadow: 0px 0 450px 32px #0277BD; }
+.kotlin-skills:hover { box-shadow: 0px 0 450px 32px #945DFF; }
+.js-skills:hover { box-shadow: 0px 0 450px 32px #FFD600; }
+
+.skill-card h3 {
+    border-color: #48484884;
+}
+
+.skill-card ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 50px;
+    border: rgba(70, 70, 70, 0.518) solid 2px;
+    width: fit-content;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.skill-card .python li:hover { border-color: #0277BD; }
+.skill-card .kotlin li:hover { border-color: #945DFF; }
+.skill-card .javascript li:hover { border-color: #FFD600; }
