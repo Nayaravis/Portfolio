@@ -618,6 +618,15 @@ h1::selection {
   cursor: pointer;
   user-select: none;
 }
+.skill-card .python li:hover {
+  border-color: #0277BD;
+}
+.skill-card .kotlin li:hover {
+  border-color: #945DFF;
+}
+.skill-card .javascript li:hover {
+  border-color: #FFD600;
+}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
