@@ -11,8 +11,9 @@
 <body>
     <div class="nav-container fixed w-full p-2 flex justify-center z-100">
         <nav class="p-6 flex fixed items-center justify-center rounded-full border-2">
-            <ul class="flex justify-around sm:text-2xl text[18px] gap-[50px]">
+            <ul class="flex justify-around sm:text-2xl text[18px] sm:gap-[50px] gap-4">
                 <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
@@ -23,11 +24,22 @@
             <span class="text-[32px]">Hi,</span><span class="md:text-[120px] text-[80px] font-black name-row">
             <span>I</span><span>'</span><span>m</span> <span>N</span><span>a</span><span>v</span><span>i</span><span>s</span>
             </span>
+            <span class="text-2xl"><em>I'm a software engineer</em></span>
         </h1>
-        <p class="text-2xl text-center mb-7">I design solutions by questioning assumptions first</p>
+        <p class="text-2xl md:text-center text-left  md:p-0 p-1.5  mb-7">I design solutions by questioning assumptions first.</p>
         <div class="w-full flex justify-center items-center h-20 mb-2.5" id="arrow">
             <img src="./assets/images/keyboard_double_arrow_down.svg" alt="keyboard_double_arrow_down">
         </div>
+    </section>
+    <section id="about" class="h-fit w-full bg-black pt-40 text-white">
+        <h1 class="text-center text-4xl font-semibold">Philosophy</h1>
+        <p class="text-center text-2xl md:px-2.5 px-2.5">I don't build 'clean' UIs - I build interfaces that respect attention spans. Most code I've written is invisible, and I like it that way.</p>
+        <br>
+        <p class="text-center text-2xl md:px-2.5 px-2.5">
+  I don’t build for <span class="text-red-600 drop-shadow-[0_0_4px_rgba(239,68,68,0.6)]">trends</span>.<br>
+  I build for the <span class="text-emerald-500 drop-shadow-[0_0_6px_rgba(16,185,129,0.8)]">edge cases</span>.<br>
+  Where real users live.
+</p>
     </section>
     <section id="skills" class="h-fit w-full bg-black py-16">
         <div class="skills-list w-full sm:h-screen h-fit md:p-0 p-2 flex flex-wrap justify-center items-center gap-7">
@@ -57,8 +69,29 @@
             </div>
         </div>
     </section>
-    <section id="contact" class="h-screen w-full">
-
+    <section id="contact" class="w-full max-w-2xl mx-auto px-4 py-16">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-800">I read <strong>EVERYTHING!</strong></h2>
+        <form class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Name or alias is fine"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-black bg-white p-2 text-sm" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Your email — or burner, I don't mind"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-black bg-white p-2 text-sm" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Say what you need"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-black bg-white p-2 text-sm"></textarea>
+          </div>
+          <div>
+            <button type="submit"
+              class="inline-block bg-black text-white px-4 py-2 rounded-md text-sm hover:bg-gray-800 transition">Send</button>
+          </div>
+        </form>
     </section>
 </body>
 </html>
