@@ -66,11 +66,11 @@ h1::selection {
     }
 }
 
-@media (width >= 48rem) {
+/* @media (width >= 48rem) {
     .python-skills:hover { box-shadow: 0px 0 450px 32px #0277BD; }
     .kotlin-skills:hover { box-shadow: 0px 0 450px 32px #945DFF; }
     .js-skills:hover { box-shadow: 0px 0 450px 32px #FFD600; }
-}
+} */
 
 #arrow {
     animation: fade-translate 2s cubic-bezier(0.76,-0.01, 0.56, 0.98) infinite;
